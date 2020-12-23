@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int x, y, z;
+	cin >> x >> y >> z;
+	int min1, min2, min3;
+	min1 = abs(x - y) + abs(y - z);
+	min2 = abs(x - z) + abs(y - z);
+	min3 = abs(x - y) + abs(x - z);
+	cout << min(min(min1, min2), min3);
+}
