@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int l, r, a;
+	cin >> l >> r >> a;
+	while (a > 0)
+	{
+		if (l < r)
+		{
+			l++; a--;
+		}
+		else if (r < l)
+		{
+			r++; a--;
+		}
+		else if (r == l)
+		{
+			l++; r++; a -= 2;
+		}
+	}
+	if (a < 0) 
+	{
+		l += a; r += a;
+	}
+	cout << min(l, r) * 2;
+}
