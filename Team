@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+	int n, cnt = 0, solve = 0;
+	cin >> n;
+	int* arr = new int[n * 3];
+	for (int i = 0; i < n * 3; i++)
+		cin >> arr[i];
+	for (int i = 0; i < n * 3; i++)
+	{
+		if (arr[i] == 1)
+			cnt++;
+		if (i % 3 == 2)
+		{
+			if (cnt >= 2)
+			{
+				solve++;
+			}
+				cnt = 0;
+		}	
+	}
+	cout << solve;
+}
