@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	string s;
+	cin >> s;
+	int start = 0;
+	int Smoves = 0;
+	for (int i = 0; i < s.length(); i++)
+	{
+		int index = (s[i] - 97);
+		int walk = abs(start - index);
+		if (walk < 13)
+			Smoves += walk;
+		else
+			Smoves += 26 - walk;
+		start = index;
+	}
+	cout << Smoves;
+}
