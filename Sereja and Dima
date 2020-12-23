@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n, start = 0,end;
+	cin >> n;
+	end = n - 1;
+	int* arr = new int[n];
+	int person[2] = { 0 ,0};
+	for (int i = 0; i < n; i++)
+	{
+		cin >> arr[i];
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[start] >= arr[end])
+		{
+			person[i % 2] += arr[start];
+			start++;
+		}
+		else
+		{
+			person[i % 2] += arr[end];
+			end--;
+		}
+	}
+	cout << person[0] << " " << person[1];
+ 
+ 
+}
