@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n;
+	cin >> n;
+	float x = sqrt(8 * n + 1);
+	int res = x / 1;
+	if (res == x)
+		cout << "YES";
+	else
+		cout << "NO";
+}
